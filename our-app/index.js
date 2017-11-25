@@ -1,31 +1,33 @@
 const express = require('express');
+const mustacheExpress = require('mustache-express');
 const app = express();
 
-const bodyParser = require('body-parser');
-const request = require('request');
-const rp = require('request-promise');
-const path = require('path');
-const _ = require("underscore");
-
+//body-parser
+var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.resolve('./web')));
 
-/* Static pages */
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve('./web/index.html'));
-});
+//Set rendering engines
+app.engine('html', mustacheExpress());
+app.set('view engine', 'html');
+
+//Setting view pages
+app.set('views', __dirname + '/html');
+app.use(express.static(__dirname + '/web'));
+
 
 app.get('/add', (req, res) => {
     console.log("Latitude: " + req.query['latitude']);
     console.log("Longitude: " + req.query['longitude']);
 
-
-    res.sendFile(path.resolve('./web/add.html'));
+    res.render('add', {
+        latitude: req.query['latitude'],
+        longitude: req.query['longitude'],
+    });
 });
 
 app.get('/show', (req, res) => {
-    res.sendFile(path.resolve('./web/show.html'));
+    res.render('show', {});
 });
 
 
