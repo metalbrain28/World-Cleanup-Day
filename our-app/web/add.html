@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Mobirise v4.4.1, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <!--<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">-->
     <meta name="description" content="">
     <title>Home</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
     <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
     <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -21,10 +22,15 @@
     <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/style.css">
 
 
-
 </head>
-<body>
-<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background" id="header2-8" data-rv-view="4" style="background-image: url(assets/images/landscape.jpg);">
+<body style="margin: 0px; padding: 0px;">
+
+<!--<div class="header">-->
+    <!--<img id="#to_share" style="width: 10%;" src="https://opendata.letsdoitworld.org/img/logos/WorldCleanupDay.png"/>-->
+<!--</div>-->
+
+<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background" id="header2-8"
+         data-rv-view="4" style="background-image: url(assets/images/landscape.jpg);">
 
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
     </div>
@@ -37,28 +43,30 @@
                     <div class="mbr-table-md-up">
 
 
-
-
                         <div class="mbr-table-cell col-md-5 content-size text-xs-center text-md-right">
 
                             <h3 class="mbr-section-title display-2"></h3>
                             <div class="header">
-                                <img src="logo-sinine.png"/>
+                                <img style="width: 20%;" src="https://opendata.letsdoitworld.org/img/logos/WorldCleanupDay.png"/>
                             </div>
+                            <br><br>
                             <div class="big-container">
                                 <div class="container">
 
                                     <div class="row">
                                         <div class="col-lg-6 col-xs-12 col-sm-12 col-md-6 well well-sm">
-                                            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a><p style="color:white; text-align: center" > Event</p></legend>
+                                            <legend><a href="http://www.jquery2dotnet.com"><i
+                                                    class="glyphicon glyphicon-globe"></i></a>
+                                                <p style="color:white; text-align: center"> Event</p></legend>
                                             <form action="#" method="post" class="form" role="form">
-                                                <input class="form-control" name="eventName" placeholder="Event name" type="text" required/>
+                                                <input class="form-control" name="eventName" placeholder="Event name"
+                                                       type="text" required/>
 
 
-                                                    <p style="color:white; text-align: center"> Please select date</p>
+                                                <p style="color:white; text-align: center"> Please select date</p>
                                                 <div class="row">
                                                     <div class="col-xs-4 col-md-4">
-                                                        <select class="form-control">
+                                                        <select class="form-control" required>
                                                             <option value="Day">Day</option>
                                                             <option value='1'>1</option>
                                                             <option value='2'>2</option>
@@ -94,7 +102,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-xs-4 col-md-4">
-                                                        <select class="form-control">
+                                                        <select class="form-control" required>
                                                             <option value="Month">Month</option>
                                                             <option value="January">January</option>
                                                             <option value="February">February</option>
@@ -110,7 +118,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-xs-4 col-md-4">
-                                                        <select class="form-control">
+                                                        <select class="form-control" required>
                                                             <option value="Year">Year</option>
                                                             <option value='2017'>2017</option>
                                                             <option value='2018'>2018</option>
@@ -119,9 +127,12 @@
                                                     </div>
                                                 </div>
                                                 <label><p id="#organizer" style="color:white"> Organizer</p></label>
-                                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Enter organizer name and data contact"></textarea>
+                                                <textarea name="message" id="message" class="form-control" rows="9"
+                                                          cols="25" required="required"
+                                                          placeholder="Enter organizer name and data contact"></textarea>
 
-                                                <label><p style="color:white; text-align: center"> Event type</p></label>
+                                                <label><p style="color:white; text-align: center"> Event type</p>
+                                                </label>
                                                 <div class="row">
                                                     <div class="col-xs-12 col-md-12">
                                                         <select class="form-control">
@@ -131,10 +142,14 @@
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-lg btn-primary btn-block" type="submit">
-                                                    Create event</button>
+                                                    Create event
+                                                </button>
+
+
                                             </form>
                                         </div>
-                                        <div class="mbr-table-cell mbr-valign-top mbr-left-padding-md-up col-md-7 image-size" style="width: 25%;">
+                                        <div class="mbr-table-cell mbr-valign-top mbr-left-padding-md-up col-md-7 image-size"
+                                             style="width: 25%;">
                                             <div class="mbr-figure"><img src="assets/images/coworkers.jpg"></div>
                                         </div>
                                     </div>
@@ -143,25 +158,18 @@
                                 <div class="mbr-section-text">
                                     <p></p>
                                 </div>
-
-
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-        <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#next"><i class="mbr-arrow-icon"></i></a></div>
 
 </section>
 
-
-<section class="engine"><a href="https://mobirise.co/c">free website maker</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
+<section class="engine"><a href="https://mobirise.co/c">free website maker</a></section>
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
 <script src="assets/tether/tether.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/smooth-scroll/smooth-scroll.js"></script>
