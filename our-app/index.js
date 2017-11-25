@@ -34,6 +34,12 @@ app.get('/show', (req, res) => {
     res.render('show', {});
 });
 
+app.post('/add-submit', (req, res) => {
+    console.log(req.body);
+
+    res.render('show', {});
+});
+
 
 
 

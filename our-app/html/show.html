@@ -54,7 +54,7 @@
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-1">
                                     <h2 class="mbr-section-title display-1">Where?</h2>
-                                    <p class="mbr-section-lead lead">Romania, Bucharest sector 5, Ferentari</p>
+                                    <p id="where" class="mbr-section-lead lead">Romania, Bucharest sector 5, Ferentari</p>
 
 
                                 </div>
@@ -69,7 +69,7 @@
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-3 text-xs-right">
                                     <h2 class="mbr-section-title display-1">When?</h2>
-                                    <p class="mbr-section-lead lead">November 26, 2017</p>
+                                    <p id="when" class="mbr-section-lead lead">November 26, 2017</p>
 
 
                                 </div>
@@ -103,6 +103,14 @@
 <script src="/assets3/theme/js/script.js"></script>
 <script src="/assets3/mobirise-slider-video/script.js"></script>
 
+
+<script>
+    $("#where").text(localStorage.address);
+//    console.log(localStorage.evtYear);
+//    console.log(localStorage.evtMonth);
+//    console.log(localStorage.evtDay);
+//    $("#when").text(new Date(localStorage.evtYear, localStorage.evtMonth, localStorage.evtDay));
+</script>
 
 <input name="animation" type="hidden">
 </body>

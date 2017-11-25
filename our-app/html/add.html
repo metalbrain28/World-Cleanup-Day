@@ -23,11 +23,19 @@
 
     <style>
         #map {
-            margin-top: 100px;
             width: 100%;
             height: 400px;
         }
-
+        .controls {
+            margin-top: 10px;
+            border: 1px solid transparent;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            height: 32px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
         #searchInput {
             background-color: #fff;
             font-family: Roboto;
@@ -80,14 +88,14 @@
                                             <legend><a href="http://www.jquery2dotnet.com"><i
                                                     class="glyphicon glyphicon-globe"></i></a>
                                                 <p style="color:white; text-align: center">Event</p></legend>
-                                            <form action="show.html" method="post" class="form" role="form">
-                                                <input class="form-control" name="eventName" placeholder="Event name"
+                                            <form id="add_evt" action="/add-submit" method="post" class="form" role="form">
+                                                <input id="add_evt_title" class="form-control" name="eventName" placeholder="Event name"
                                                        type="text" required/>
 
                                                 <p style="color:white; text-align: center"> Please select date</p>
                                                 <div class="row">
                                                     <div class="col-xs-4 col-md-4">
-                                                        <select class="form-control" required>
+                                                        <select id="add_evt_day" class="form-control" required>
                                                             <option value="Day">Day</option>
                                                             <option value='1'>1</option>
                                                             <option value='2'>2</option>
@@ -123,7 +131,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-xs-4 col-md-4">
-                                                        <select class="form-control" required>
+                                                        <select id="add_evt_month" class="form-control" required>
                                                             <option value="Month">Month</option>
                                                             <option value="January">January</option>
                                                             <option value="February">February</option>
@@ -139,7 +147,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-xs-4 col-md-4">
-                                                        <select class="form-control" required>
+                                                        <select id="add_evt_year" class="form-control" required>
                                                             <option value="Year">Year</option>
                                                             <option value='2017'>2017</option>
                                                             <option value='2018'>2018</option>
@@ -148,7 +156,7 @@
                                                     </div>
                                                 </div>
                                                 <label><p id="#organizer" style="color:white"> Organizer</p></label>
-                                                <textarea name="message" id="message" class="form-control" rows="9"
+                                                <textarea id="add_evt_text" name="message" id="message" class="form-control" rows="9"
                                                           cols="25" required="required"
                                                           placeholder="Enter organizer name and data contact"></textarea>
 
@@ -156,13 +164,13 @@
                                                 </label>
                                                 <div class="row">
                                                     <div class="col-xs-12 col-md-12">
-                                                        <select class="form-control">
+                                                        <select id="add_evt_type" class="form-control">
                                                             <option value="Trash collecting">Trash collecting</option>
                                                             <option value="Meetup">Meetup</option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                                <button id="add_evt_submit" class="btn btn-lg btn-primary btn-block" type="submit">
                                                     Create event
                                                 </button>
 

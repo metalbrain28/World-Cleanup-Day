@@ -9,6 +9,12 @@ function initMap() {
         center: {lat: latitude, lng: longitude},
         zoom: 5
     });
+
+    var marker2 = new google.maps.Marker({
+        position: {lat: latitude, lng: longitude},
+        map: map
+    });
+    map.setZoom(13);
     var input = document.getElementById('searchInput');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
@@ -75,3 +81,25 @@ function initMap() {
     });
 }
 
+$("#add_evt").on("submit", function(e) {
+    e.preventDefault();
+
+    var evtTitle = $("#add_evt_title").val(),
+        evtDay = $("#add_evt_day").val(),
+        evtMonth = $("#add_evt_month").val(),
+        evtYear = $("#add_evt_year").val(),
+        evtText = $("#add_evt_text").val(),
+        evtType = $("#add_evt_type").val();
+
+    localStorage.setItem('evtTitle', evtTitle);
+    localStorage.setItem('evtDay', evtDay);
+    localStorage.setItem('evtMonth', evtMonth);
+    localStorage.setItem('evtYear', evtYear);
+    localStorage.setItem('evtText', evtText);
+    localStorage.setItem('evtType', evtType);
+    localStorage.setItem("address", $("#searchInput").val());
+
+    console.log(localStorage);
+
+    window.location.href = "/show";
+});
