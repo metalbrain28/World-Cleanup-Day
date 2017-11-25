@@ -91,7 +91,15 @@ class Details extends Component {
             })}
           </div>
         </div>
-        <div className="Details-filler" />
+        <div className="Details-filler">
+          <div className="Event-add-container">
+            <div className="buttons">
+              <a href={ `http://localhost:3001/add?` + (location ? `latitude=${location.latitude.toFixed(6)}&longitude=${location.longitude.toFixed(6)}` : '') } >
+                Create event
+              </a>
+            </div>
+          </div>
+        </div>
         {canEdit &&
           <div className="Details-edit-container">
             <span>

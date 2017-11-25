@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/add', (req, res) => {
+    console.log("Latitude: " + req.query['latitude']);
+    console.log("Longitude: " + req.query['longitude']);
+
+
     res.sendFile(path.resolve('./web/add.html'));
 });
 

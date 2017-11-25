@@ -108,6 +108,7 @@
   color: #fff;
 }
 
+.Event-add-container .buttons,
 .Details-edit-container .buttons {
   margin-top: 20px;
   display: flex;
@@ -115,6 +116,7 @@
   justify-content: center;
 }
 
+.Event-add-container .buttons a,
 .Details-edit-container .buttons button {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .5);
   border-radius: 100px;
@@ -122,6 +124,11 @@
   padding: 0 23px;
   min-width: 85px;
   font-weight: 700;
+}
+
+.Event-add-container .buttons a {
+  background-color: #fff;
+  color: #3e8ede;
 }
 
 .Details-edit-container .buttons button:first-of-type {
