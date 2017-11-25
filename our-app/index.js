@@ -15,6 +15,10 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/html');
 app.use(express.static(__dirname + '/web'));
 
+app.get('/', (req, res) => {
+    res.render('index', {});
+});
+
 
 app.get('/add', (req, res) => {
     console.log("Latitude: " + req.query['latitude']);
