@@ -11,6 +11,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.resolve('./web')));
 
-// app.get('/', (req, res) => res.send('Hello World!'));
+/* Static pages */
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve('./web/index.html'));
+});
+
+app.get('/add', (req, res) => {
+    res.sendFile(path.resolve('./web/add.html'));
+});
+
+app.get('/show', (req, res) => {
+    res.sendFile(path.resolve('./web/show.html'));
+});
+
+
+
 
 app.listen(3001, () => console.log('Example app listening on port 3001!'));
